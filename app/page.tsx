@@ -8,7 +8,8 @@ interface PageProps {
   topLogoRef: React.RefObject<HTMLDivElement>
 }
 
-export default function Home({ topLogoRef }: PageProps) {
+// export default function Home({ topLogoRef }: PageProps) {
+export default function Home() {
   const [scrollY, setScrollY] = useState(0);
 
   const data = [{ image: "/home/carousel/1.jpg" },
