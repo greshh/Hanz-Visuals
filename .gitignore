@@ -29,9 +29,9 @@
 /app/icon.jpg
 
 # projects and filters lists
-/app/filters.json
-/app/projects.json
-/app/projects-data.ts
+# /app/filters.json
+# /app/projects.json
+# /app/projects-data.ts
 
 # debug
 npm-debug.log*
