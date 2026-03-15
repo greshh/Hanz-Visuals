@@ -21,12 +21,12 @@
 *.pem
 
 # images (due to copyright)
-/public/home/carousel/*
-/public/home/photo-video-graphic/*
-/public/home/projects-sequence.mp4
-/public/logo*
-/public/projects/cover/*
-/app/icon.jpg
+# /public/home/carousel/*
+# /public/home/photo-video-graphic/*
+# /public/home/projects-sequence.mp4
+# /public/logo*
+# /public/projects/cover/*
+# /app/icon.jpg
 
 # projects and filters lists
 # /app/filters.json
@@ -50,4 +50,4 @@ yarn-error.log*
 next-env.d.ts
 
 # fonts
-public/fonts/*
+# public/fonts/*
