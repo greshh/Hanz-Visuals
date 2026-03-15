@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Photos",
+    "type": "media",
+    "colour": "#D6B98C"
+  },
+  {
+    "name": "Videos",
+    "type": "media",
+    "colour": "#2B4C6F"
+  },
+  {
+    "name": "Graphics",
+    "type": "media",
+    "colour": "#CFCFCF"
+  },
+  {
+    "name": "Basketball",
+    "type": "sport",
+    "colour": "#F36B21"
+  }, 
+  {
+    "name": "Volleyball",
+    "type": "sport",
+    "colour": "#D4AF37"
+  },
+  {
+    "name": "Futsal",
+    "type": "sport",
+    "colour": "#8B4513"
+  }
+]
