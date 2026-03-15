@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: larger;
+}
+
+/* PHONK font */
+
+@font-face {
+  font-family: 'phonk';
+  src: url('/fonts/Phonk-Contrast.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ANONYMOUS PRO font */
+
+@font-face {
+  font-family: 'anonymouspro';
+  src: url('/fonts/AnonymousPro/AnonymousPro-400-italic.ttf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'anonymouspro';
+  src: url('/fonts/AnonymousPro/AnonymousPro-400-normal.ttf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'anonymouspro';
+  src: url('/fonts/AnonymousPro/AnonymousPro-700-italic.ttf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'anonymouspro';
+  src: url('/fonts/AnonymousPro/AnonymousPro-700-normal.ttf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* HUMANE font */
+
+@font-face {
+  font-family: 'humane';
+  src: url('/fonts/Humane/Humane-100-normal.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'humane';
+  src: url('/fonts/Humane/Humane-200-normal.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'humane';
+  src: url('/fonts/Humane/Humane-300-normal.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'humane';
+  src: url('/fonts/Humane/Humane-400-normal.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'humane';
+  src: url('/fonts/Humane/Humane-500-normal.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'humane';
+  src: url('/fonts/Humane/Humane-600-normal.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'humane';
+  src: url('/fonts/Humane/Humane-700-normal.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
