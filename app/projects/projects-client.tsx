@@ -95,9 +95,9 @@ export default function ProjectsClient() {
             onClick={()=>setFilterOpen(prev=>!prev)}
             className="cursor-pointer w-10 h-10"
           />
-          {selectedFilters.map(f=>(
+          {selectedFilters.length > 0 ? (selectedFilters.map(f=>(
             <div 
-              className="flex flex-row gap-2 py-1 px-3 text-center rounded-2xl items-center" 
+              className="flex flex-row gap-2 py-1 px-3 text-center rounded-2xl items-center text-black font-anonymouspro" 
               style={{backgroundColor: f.colour}}
               key={f.name}
             >
@@ -109,7 +109,14 @@ export default function ProjectsClient() {
               />
               <p className="text-center font-bold">{f.name}</p>
             </div>
-          ))}
+          ))) : (
+            <div className="flex flex-col justify-center w-fit">
+              <div className="flex flex-row gap-4">
+                <img src="/projects/arrow.svg" alt="arrow left" className="mx-auto"/>
+                <p className="text-black italic font-anonymouspro font-semibold h-fit">select filters!</p>
+              </div>
+            </div>
+          )}
         </div>
         <div className="grid grid-cols-4 gap-10 font-anonymouspro ">
           {projectList.map(p=>{
@@ -130,7 +137,7 @@ export default function ProjectsClient() {
               p.link.includes("projects") ? (
                 <Link href={p.link} className="block" key={p.name}>
                   <div 
-                    className="group flex flex-col items-end justify-end text-right h-52 lg:h-80 bg-cover transition-shadow duration-300 hover:shadow-[0_4px_10px_rgba(0,0,0,0.5)]" 
+                    className="group flex flex-col items-end justify-end text-right h-52 lg:h-80 transition-shadow duration-300 hover:shadow-[0_4px_10px_rgba(0,0,0,0.5)] bg-[length:120%] bg-[position:40%_40%]" 
                     style={{ backgroundImage: p.key ? `url(/projects/cover/${p.key}.jpg)` : "none" }} 
                     key={p.name}
                   >
@@ -148,7 +155,7 @@ export default function ProjectsClient() {
                   className="block"
                 >
                   <div 
-                    className="group flex flex-col items-end justify-end text-right h-52 lg:h-80 bg-cover transition-shadow duration-300 hover:shadow-[0_4px_10px_rgba(0,0,0,0.5)]" 
+                    className="group flex flex-col items-end justify-end text-right h-52 lg:h-80 bg-[length:120%] bg-[position:40%_40%] transition-shadow duration-300 hover:shadow-[0_4px_10px_rgba(0,0,0,0.5)]" 
                     style={{ backgroundImage: p.key ? `url(/projects/cover/${p.key}.jpg)` : "none" }} 
                     key={p.name}
                   >
