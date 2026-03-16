@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import TransitionProvider from "./transition-provider";
-import { useRef } from "react"
+import emailjs from "@emailjs/browser";
+import Script from "next/script";
 import Navbar from "./navbar";
 import "./globals.css";
 
@@ -18,10 +19,26 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link
           rel="icon"
-          href="/icon?icon.jpg"
-          type="image/icon.jpg"
-          sizes="icon.jpg"
+          href="/icon?icon.png"
+          type="image/icon.png"
+          sizes="icon.png"
         />
+        <Script
+          src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+          strategy="beforeInteractive"
+        />
+        <Script
+          id="emailjs-init"
+          strategy="beforeInteractive"
+        >
+          {`
+            (function(){
+              emailjs.init({
+                publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+              });
+            })();
+          `}
+        </Script>
       </head>
       <body>
         {/* <Navbar topLogoRef={topLogoRef}/> */}

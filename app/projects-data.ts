@@ -21,7 +21,7 @@ export const projects: Project[] = [
     "key": "unim8s-semester-2-25",
     "startDate": "2025-10-13",
     "endDate": "2025-10-17",
-    "tags": ["photos", "basketball", "volleyball", "futsal"],
+    "tags": ["photos", "basketball", "volleyball", "futsal", "football"],
     "link": "/projects/unim8s-semester-2-25"
   },
   {

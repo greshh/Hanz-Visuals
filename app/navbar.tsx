@@ -8,7 +8,26 @@ interface NavbarProps {
 
 // export default function Navbar({ topLogoRef }: NavbarProps) {
 export default function Navbar() {
-  const [showLogo, setShowLogo] = useState(false)
+  const [showLogo, setShowLogo] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const logo = document.querySelector("#logo");
+  
+      if (!logo) {
+        setShowLogo(true);
+        return;
+      }
+  
+      const rect = logo.getBoundingClientRect();
+      setShowLogo(rect.bottom <= 0);
+    };
+  
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // run once on mount
+  
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // useEffect(() => {
   //   if (!topLogoRef.current) return
@@ -31,15 +50,17 @@ export default function Navbar() {
 
   return (
     <nav className="bg-neutral-950 font-anonymouspro sticky top-0 text-xl lg:text-2xl z-50">
-      <div className="container mx-auto px-10 py-7 flex justify-between items-center text-white">
+      <div className="container mx-auto px-10 py-5 flex justify-between h-[10vh] items-center text-white">
         <div className="flex space-x-20">
-          <Link href="/#home">Home</Link>
-          <Link href="/#who-we-are">Who we are</Link>
+          <Link href="/#home" className="hover:text-[#A7C2DD] transition-hover duration-500">Home</Link>
+          <Link href="/#who-we-are" className="hover:text-[#A7C2DD] transition-hover duration-500">Who we are</Link>
         </div>
-        {showLogo && <img src="/logo-transparent.png" alt="logo" className="h-fit" />}
+        <Link href="/#home" className="h-full opacity-0 transition-opacity duration-500" style={{ opacity: showLogo ? 1 : 0 }}>
+          <img src="/logo-hanz-transparent.png" alt="logo" className="h-full"/>
+        </Link>
         <div className="flex space-x-20">
-          <Link href="/projects">Projects</Link>
-          <Link href="/#contact">Contact</Link>
+          <Link href="/projects" className="hover:text-[#A7C2DD] transition-hover duration-500">Projects</Link>
+          <Link href="/#contact" className="hover:text-[#A7C2DD] transition-hover duration-500">Contact</Link>
         </div>
       </div>
     </nav>
