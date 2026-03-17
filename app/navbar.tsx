@@ -49,18 +49,18 @@ export default function Navbar() {
   // }, [])
 
   return (
-    <nav className="bg-neutral-950 font-anonymouspro sticky top-0 text-xl lg:text-2xl z-50">
-      <div className="container mx-auto px-10 py-5 flex justify-between h-[10vh] items-center text-white">
-        <div className="flex space-x-20">
+    <nav className="bg-neutral-950 font-anonymouspro sticky top-0 text-xl md:text-2xl z-50">
+      <div className="container mx-auto px-6 md:px-10 md:py-10 py-5 flex justify-between h-[10vh] items-center text-white">
+        <div className="flex space-x-20 w-[20vw] md:w-fit">
           <Link href="/#home" className="hover:text-[#A7C2DD] transition-hover duration-500">Home</Link>
-          <Link href="/#who-we-are" className="hover:text-[#A7C2DD] transition-hover duration-500">Who we are</Link>
+          <Link href="/#who-we-are" className="hover:text-[#A7C2DD] hidden lg:inline transition-hover duration-500">Who we are</Link>
         </div>
-        <Link href="/#home" className="h-full opacity-0 transition-opacity duration-500" style={{ opacity: showLogo ? 1 : 0 }}>
+        <Link href="/#home" className="h-[5vh] opacity-0 transition-opacity duration-500 w-fit" style={{ opacity: showLogo ? 1 : 0 }}>
           <img src="/logo-hanz-transparent.png" alt="logo" className="h-full"/>
         </Link>
-        <div className="flex space-x-20">
+        <div className="flex space-x-20 w-[20vw] md:w-fit">
           <Link href="/projects" className="hover:text-[#A7C2DD] transition-hover duration-500">Projects</Link>
-          <Link href="/#contact" className="hover:text-[#A7C2DD] transition-hover duration-500">Contact</Link>
+          <Link href="/#contact" className="hidden lg:inline hover:text-[#A7C2DD] transition-hover duration-500">Contact</Link>
         </div>
       </div>
     </nav>
