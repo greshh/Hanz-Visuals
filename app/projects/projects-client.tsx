@@ -80,14 +80,14 @@ export default function ProjectsClient() {
 
   return (
     <div className="bg-white w-full">
-      <div className="flex bg-gradient-to-b from-neutral-950 to-neutral-500 w-full h-[90vh] justify-center items-center">
-        <h1 className="text-white font-humane text-[400px] font-semibold tracking-wider">{("Projects").toUpperCase()}</h1>
+      <div className="flex bg-gradient-to-b from-neutral-950 to-neutral-500 w-full h-60 md:h-[90vh] justify-center items-center">
+        <h1 className="text-white font-humane text-9xl md:text-[200px] lg:text-[400px] font-semibold tracking-wider">{("Projects").toUpperCase()}</h1>
       </div>
-      <div className="h-40 relative">
-        <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-neutral-400 to-white"/>
+      <div className="h-12 md:h-40 relative">
+        <div className="absolute top-0 left-0 w-full h-10 md:h-20 bg-gradient-to-b from-neutral-400 to-white"/>
       </div>
-      <FilterDropdown selectedFilters={selectedFilters} router={router} filterOpen={filterOpen}/>
-      <div className="px-20 lg:px-52 mb-20 min-h-[25rem]" id="filter">
+      <FilterDropdown selectedFilters={selectedFilters} router={router} filterOpen={filterOpen} setFilterOpen={setFilterOpen}/>
+      <div className="px-10 md:px-52 mb-20 min-h-[25rem]" id="filter">
         <div className="flex flex-row gap-4 mb-10">
           <img 
             src="/projects/filter.svg" 
@@ -111,14 +111,14 @@ export default function ProjectsClient() {
             </div>
           ))) : (
             <div className="flex flex-col justify-center w-fit">
-              <div className="flex flex-row gap-4">
+              <div className="flex flex-row gap-3 md:gap-4">
                 <img src="/projects/arrow.svg" alt="arrow left" className="mx-auto"/>
-                <p className="text-black italic font-anonymouspro font-semibold h-fit">select filters!</p>
+                <p className="text-black italic font-anonymouspro font-semibold h-fit text-base md:text-xl">select filters!</p>
               </div>
             </div>
           )}
         </div>
-        <div className="grid grid-cols-4 gap-10 font-anonymouspro ">
+        <div className="flex flex-row flex-wrap gap-10 font-anonymouspro">
           {projectList.map(p=>{
             let startDate = "";
             let endDate = "";
@@ -135,13 +135,13 @@ export default function ProjectsClient() {
 
             return (
               p.link.includes("projects") ? (
-                <Link href={p.link} className="block" key={p.name}>
+                <Link href={p.link} className="block w-full md:w-60" key={p.name}>
                   <div 
-                    className="group flex flex-col items-end justify-end text-right h-52 lg:h-80 transition-shadow duration-300 hover:shadow-[0_4px_10px_rgba(0,0,0,0.5)] bg-[length:120%] bg-[position:40%_40%]" 
+                    className="group flex flex-col items-end justify-end text-right h-full md:h-80 transition-shadow duration-300 hover:shadow-[0_4px_10px_rgba(0,0,0,0.5)] bg-[length:120%] bg-[position:40%_40%]" 
                     style={{ backgroundImage: p.key ? `url(/projects/cover/${p.key}.jpg)` : "none" }} 
                     key={p.name}
                   >
-                    <div className="bg-[#e5e5e5e1] p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <div className="bg-[#e5e5e5e1] p-4 opacity-100 md:opacity-0 md:group-hover:opacity-100 md:transition-opacity md:duration-500">
                       <p className="text-black leading-none font-phonk text-2xl">{p.name.toUpperCase()}</p>
                       <p className="text-black text-base">{startDate && <span>{startDate}</span>}{p.endDate && <span> - {endDate}</span>}</p>
                     </div>
@@ -152,14 +152,14 @@ export default function ProjectsClient() {
                   href={p.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block"
+                  className="block w-full md:w-60"
                 >
                   <div 
-                    className="group flex flex-col items-end justify-end text-right h-52 lg:h-80 bg-[length:120%] bg-[position:40%_40%] transition-shadow duration-300 hover:shadow-[0_4px_10px_rgba(0,0,0,0.5)]" 
+                    className="group flex flex-col items-end justify-end text-right h-full md:h-80 bg-[length:120%] bg-[position:40%_40%] transition-shadow duration-300 hover:shadow-[0_4px_10px_rgba(0,0,0,0.5)]" 
                     style={{ backgroundImage: p.key ? `url(/projects/cover/${p.key}.jpg)` : "none" }} 
                     key={p.name}
                   >
-                    <div className="bg-[#e5e5e5e1] p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <div className="bg-[#e5e5e5e1] p-4 opacity-100 md:opacity-0 md:group-hover:opacity-100 md:transition-opacity md:duration-500">
                       <p className="text-black leading-none font-phonk text-2xl">{p.name.toUpperCase()}</p>
                       <p className="text-black text-base">{startDate && <span>{startDate}</span>}{p.endDate && <span> - {endDate}</span>}</p>
                     </div>

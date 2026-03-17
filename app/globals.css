@@ -21,6 +21,15 @@ body {
   font-size: larger;
 }
 
+img {
+  /* image-rendering: auto; */
+
+  /* Safari seems to support, but seems deprecated and does the same thing as the others. */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  /* image-rendering: pixelated; */
+}
+
 /* PHONK font */
 
 @font-face {
