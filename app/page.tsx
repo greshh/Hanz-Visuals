@@ -5,11 +5,6 @@ import Footer from "./footer";
 import Carousel from "./carousel";
 import emailjs from "@emailjs/browser";
 
-interface PageProps {
-  topLogoRef: React.RefObject<HTMLDivElement>
-}
-
-// export default function Home({ topLogoRef }: PageProps) {
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
   const [emailStatus, setEmailStatus] = useState<"idle" | "success" | "error">("idle");
@@ -22,7 +17,8 @@ export default function Home() {
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const formData = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
 
     const emailParams = {
       title: formData.get("subject"),
@@ -41,6 +37,7 @@ export default function Home() {
       (response) => {
         console.log('Success:', response.status, response.text);
         setEmailStatus("success");
+        form.reset();
       },
       (error) => {
         console.log('Error:', error);
@@ -99,8 +96,8 @@ export default function Home() {
         <hr className="border-neutral-800 my-16 md:my-24"/>
         <div className="mb-16 md:mb-36">
           <h2 id="who-we-are" className="font-phonk text-3xl md:text-4xl mb-5 scroll-mt-60 text-black">{("Who we are").toUpperCase()}</h2>
-          <p className="mb-6 text-md md:text-xl text-black md:leading-relaxed">Hanz Visuals is run by two brothers, Hanz and Dhon — a creative duo based in Auckland, New Zealand. Our work is driven by movement, energy, and authenticity, shaped by our background in basketball and sport. We're drawn to real moments — the grit, the emotion, the details people don't always notice — and we capture them in a way that feels cinematic, powerful, and true to the moment.</p>
-          <p className="mb-6 text-md md:text-xl text-black md:leading-relaxed">Whether we're shooting high-intensity game action, creating athlete content, or building visual stories for brands, we focus on clean visuals, strong storytelling, and intentional colour. For us, it's not just about taking photos — it's about creating images that athletes, teams, and creatives are proud to stand behind.</p>
+          <p className="mb-6 text-md md:text-xl text-black md:leading-relaxed">Kia Ora! Hanz Visuals is run by two brothers, Hanz and Dhon, based in Auckland, New Zealand. We grew up with basketball, volleyball, and other sports, so we know firsthand the highs, the lows, and everything in between that comes with sports. We love capturing those moments: the small details that make the game what it is. Being creative at heart, we combine our love for the game with our passion to create, which is why we are so passionate about sports photography.</p>
+          <p className="mb-6 text-md md:text-xl text-black md:leading-relaxed">Whether we're creating personal athlete content, promoting your next sports event, or capturing high-intensity moments, we focus on clean visuals, strong storytelling, and shooting with purpose. For us, it's not just about taking photos; it's about delivering images and media that athletes, teams, and creatives are proud to share.</p>
         </div>
       </div>
       <div className="bg-black w-full aspect-[2/1] md:aspect-[4/1] my-10 md:my-20 relative">
@@ -119,18 +116,18 @@ export default function Home() {
           <div className="flex flex-col items-center md:items-end justify-center w-full md:w-[50%] px-10">
             <h2 id="contact" className="font-phonk text-3xl md:text-4xl mb-2 scroll-mt-60">{("Contact").toUpperCase()}</h2>
             <div className="text-center md:text-right text-base md:text-2xl leading-relaxed">
-              <p className="hover:text-[#A7C2DD] transition-hover duration-500"><a href="https://www.instagram.com/hanzvisuals_/" target="_blank" rel="noopener"><span className="font-bold">Instagram:</span> @hanzvisuals_</a></p>
-              <p className="hover:text-[#A7C2DD] transition-hover duration-500"><a href="mailto:hanzvisuals1@gmail.com"><span className="font-bold">Email:</span> hanzvisuals1@gmail.com</a></p>
-              <p className="hover:text-[#A7C2DD] transition-hover duration-500"><a href="https://www.tiktok.com/@hanzvisualss" target="_blank" rel="noopener"><span className="font-bold">TikTok:</span> @hanzvisualss</a></p>
+              <p className="hover:text-[#89ADD1] transition-hover duration-500"><a href="https://www.instagram.com/hanzvisuals_/" target="_blank" rel="noopener"><span className="font-bold">Instagram:</span> @hanzvisuals_</a></p>
+              <p className="hover:text-[#89ADD1] transition-hover duration-500"><a href="mailto:hanzvisuals1@gmail.com"><span className="font-bold">Email:</span> hanzvisuals1@gmail.com</a></p>
+              <p className="hover:text-[#89ADD1] transition-hover duration-500"><a href="https://www.tiktok.com/@hanzvisualss" target="_blank" rel="noopener"><span className="font-bold">TikTok:</span> @hanzvisualss</a></p>
             </div>
           </div>
           <div className="w-full md:w-[50%] px-10 mb-4 md:mb-0 md:pl-10 md:pr-48">
-            <p className="font-bold mb-3 text-center md:text-left text-base md:text-xl">Email Us:</p>
+            <p className="font-bold mb-3 text-center md:text-left text-xl md:text-2xl">Email us for Inquiries and Bookings:</p>
             <form className="flex flex-col w-full gap-3 text-base md:text-md text-black mb-3" onSubmit={sendEmail}>
               <input type="text" name="name" placeholder="Your Name" required className="px-2 py-1 rounded outline-[#1F3A5F]"/>
               <input type="email" name="email" placeholder="Your Email" required className="px-2 py-1 rounded outline-[#1F3A5F]"/>
               <input type="text" name="subject" placeholder="Subject" required className="px-2 py-1 rounded outline-[#1F3A5F]"/>
-              <textarea name="message" placeholder="Message" required className="w-full mb-2 px-2 py-1 rounded outline-[#1F3A5F]"/>
+              <textarea name="message" placeholder="Message" required className="w-full mb-2 px-2 py-1 rounded outline-[#1F3A5F] h-24"/>
               <button type="submit" className="bg-[#2B4C6F] text-white px-4 py-2 rounded font-bold hover:bg-[#1F3A5F] transition-hover duration-500">Send</button>
             </form>
             <p className="text-sm md:text-base">{emailStatus === "success" && "Email sent successfully! We will get back to you shortly."}</p>

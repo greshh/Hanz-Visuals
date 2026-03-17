@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React from "react";
 import filters from "../filters.json";
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
 

@@ -12,15 +12,13 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const topLogoRef = { current: null } as React.RefObject<HTMLDivElement>
-
   return (
     <html lang="en" className="scroll-smooth">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
           rel="icon"
-          href="/icon?icon.png"
+          href="/icon.png"
           type="image/icon.png"
           sizes="icon.png"
         />
@@ -42,7 +40,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </Script>
       </head>
       <body>
-        {/* <Navbar topLogoRef={topLogoRef}/> */}
         <Navbar/>
         <TransitionProvider>
           {children}
