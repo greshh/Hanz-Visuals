@@ -6,19 +6,11 @@ import filters from "../filters.json";
 import FilterDropdown from "./filter-dropdown";
 import Link from "next/link";
 import { projects } from "../projects-data";
-// import { getProjects } from "./projects-retrieval";
 
 interface Filter {
   name: string;
   type: string;
   colour: string;
-}
-
-interface Project {
-  name: string;
-  startDate: string;
-  endDate?: string; 
-  tags: string[];
 }
 
 interface FiltersByCategory {
@@ -40,8 +32,6 @@ export default function ProjectsClient() {
   const selectedFilters = filters.filter(f =>
     selectedFilterNames.includes((f.name).toLowerCase())
   );
-
-  // const projects: Project[] = await getProjects();
 
   // An array that separates "media" and "sports" tags from "filters" JSON
   const filtersByCategory: FiltersByCategory = {};
@@ -153,6 +143,7 @@ export default function ProjectsClient() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full md:w-60"
+                  key={p.name}
                 >
                   <div 
                     className="group flex flex-col items-end justify-end text-right h-full md:h-80 bg-[length:120%] bg-[position:40%_40%] transition-shadow duration-300 hover:shadow-[0_4px_10px_rgba(0,0,0,0.5)]" 
