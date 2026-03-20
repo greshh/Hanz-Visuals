@@ -25,13 +25,8 @@
     "colour": "#D4AF37"
   },
   {
-    "name": "Football",
+    "name": "Other",
     "type": "sport",
     "colour": "#36a348"
-  },
-  {
-    "name": "Futsal",
-    "type": "sport",
-    "colour": "#8B4513"
   }
 ]

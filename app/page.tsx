@@ -80,14 +80,14 @@ export default function Home() {
           </Link>
           <Link href="/projects?filters=videos#filter" className="group relative h-32 md:h-96 w-80">
             <div className="absolute h-32 md:h-96 w-full flex items-center justify-center z-20">
-              <p className="text-white font-phonk md:text-2xl md:text-4xl tracking-wide" style={{ textShadow: "0px 2px 20px #000000" }}>VIDEOS</p>
+              <p className="text-white font-phonk text-2xl md:text-4xl tracking-wide" style={{ textShadow: "0px 2px 20px #000000" }}>VIDEOS</p>
             </div>
             <div className="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-32 md:h-96 w-full bg-[#00000070] z-10"/>
             <div className="absolute h-32 md:h-96 inset-0 bg-[url(/home/photo-video-graphic/Videos.jpg)] bg-[length:115%] bg-center"/>
           </Link>
           <Link href="/projects?filters=graphics#filter" className="group relative h-32 md:h-96 w-80">
             <div className="absolute h-32 md:h-96 w-full flex items-center justify-center z-20">
-              <p className="text-white font-phonk md:text-2xl md:text-4xl tracking-wide" style={{ textShadow: "0px 2px 20px #000000" }}>GRAPHICS</p>
+              <p className="text-white font-phonk text-2xl md:text-4xl tracking-wide" style={{ textShadow: "0px 2px 20px #000000" }}>GRAPHICS</p>
             </div>
             <div className="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-32 md:h-96 w-full bg-[#00000070] z-10"/>
             <div className="absolute h-32 md:h-96 inset-0 bg-[url(/home/photo-video-graphic/Graphics.jpg)] bg-[length:115%] bg-center"/>
@@ -96,7 +96,7 @@ export default function Home() {
         <hr className="border-neutral-800 my-16 md:my-24"/>
         <div className="mb-16 md:mb-36">
           <h2 id="who-we-are" className="font-phonk text-3xl md:text-4xl mb-5 scroll-mt-60 text-black">{("Who we are").toUpperCase()}</h2>
-          <p className="mb-6 text-md md:text-xl text-black md:leading-relaxed">Kia Ora! Hanz Visuals is run by two brothers, Hanz and Dhon, based in Auckland, New Zealand. We grew up with basketball, volleyball, and other sports, so we know firsthand the highs, the lows, and everything in between that comes with sports. We love capturing those moments: the small details that make the game what it is. Being creative at heart, we combine our love for the game with our passion to create, which is why we are so passionate about sports photography.</p>
+          <p className="mb-6 text-md md:text-xl text-black md:leading-relaxed">Kia Ora! <span className="font-bold">Hanz Visuals</span> is run by two brothers, Hanz and Dhon, based in Auckland, New Zealand. We grew up with basketball, volleyball, and other sports, so we know firsthand the highs, the lows, and everything in between that comes with sports. We love capturing those moments: the small details that make the game what it is. Being creative at heart, we combine our love for the game with our passion to create, which is why we are so passionate about sports photography.</p>
           <p className="mb-6 text-md md:text-xl text-black md:leading-relaxed">Whether we're creating personal athlete content, promoting your next sports event, or capturing high-intensity moments, we focus on clean visuals, strong storytelling, and shooting with purpose. For us, it's not just about taking photos; it's about delivering images and media that athletes, teams, and creatives are proud to share.</p>
         </div>
       </div>
@@ -111,7 +111,7 @@ export default function Home() {
         </Link>
       </div>
       <div className="bg-gradient-to-b from-white to-neutral-950 h-20 md:h-40"/>
-      <div className="text-center bg-neutral-950 text-white py-16 md:py-60 relative h-fit w-full font-anonymouspro flex flex-col items-center justify-center md:justify-normal gap-2 flex-wrap">
+      <div className="text-center bg-neutral-950 text-white py-16 md:py-52 relative h-fit w-full font-anonymouspro flex flex-col items-center justify-center md:justify-normal gap-2 flex-wrap">
         <div className="flex flex-row w-full flex-wrap gap-6 md:gap-0 justify-center md:justify-normal">
           <div className="flex flex-col items-center md:items-end justify-center w-full md:w-[50%] px-10">
             <h2 id="contact" className="font-phonk text-3xl md:text-4xl mb-2 scroll-mt-60">{("Contact").toUpperCase()}</h2>
@@ -123,7 +123,7 @@ export default function Home() {
           </div>
           <div className="w-full md:w-[50%] px-10 mb-4 md:mb-0 md:pl-10 md:pr-48">
             <p className="font-bold mb-3 text-center md:text-left text-xl md:text-2xl">Email us for Inquiries and Bookings:</p>
-            <form className="flex flex-col w-full gap-3 text-base md:text-md text-black mb-3" onSubmit={sendEmail}>
+            <form className="flex flex-col w-full gap-3 md:text-base text-md text-black mb-3" onSubmit={sendEmail}>
               <input type="text" name="name" placeholder="Your Name" required className="px-2 py-1 rounded outline-[#1F3A5F]"/>
               <input type="email" name="email" placeholder="Your Email" required className="px-2 py-1 rounded outline-[#1F3A5F]"/>
               <input type="text" name="subject" placeholder="Subject" required className="px-2 py-1 rounded outline-[#1F3A5F]"/>
