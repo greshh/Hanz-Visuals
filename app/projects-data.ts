@@ -21,7 +21,7 @@ export const projects: Project[] = [
     "key": "unim8s-semester-2-25",
     "startDate": "2025-10-13",
     "endDate": "2025-10-17",
-    "tags": ["photos", "basketball", "volleyball", "futsal", "football"],
+    "tags": ["photos", "basketball", "volleyball", "other"],
     "link": "/projects/unim8s-semester-2-25"
   },
   {
@@ -46,5 +46,37 @@ export const projects: Project[] = [
     "endDate": "2025-12-04",
     "tags": ["photos", "basketball"],
     "link": "https://photos.app.goo.gl/4Gc6voBe88ikn99v9"
+  },
+  {
+    "name": "Spikefest",
+    "key": "spikefest-25",
+    "startDate": "2025-11-22",
+    "endDate": "2025-11-23",
+    "tags": ["photos", "volleyball"],
+    "link": "https://photos.app.goo.gl/Axs6DSNCr3djNvD88"
+  },
+  {
+    "name": "U15s IPC",
+    "key": "u15s-ipc-25",
+    "startDate": "2025-12-13",
+    "endDate": "2025-12-15",
+    "tags": ["photos", "volleyball"],
+    "link": "https://photos.app.goo.gl/uX2vLgrZU5QzUJcp8"
+  },
+  {
+    "name": "Prems Volleyball 2026",
+    "key": "prems-volleyball-26",
+    "startDate": "2026-02-20",
+    "endDate": "2026-03-06",
+    "tags": ["photos", "volleyball"],
+    "link": "https://photos.app.goo.gl/3Zqc3EKpQU5i8gor6"
+  },
+  {
+    "name": "Auckland Champs",
+    "key": "volleyball-auckland-champs-26",
+    "startDate": "2026-03-11",
+    "endDate": "2026-03-13",
+    "tags": ["photos", "volleyball"],
+    "link": "https://photos.app.goo.gl/Y9FdguWWQfCR4xsKA"
   }
 ]

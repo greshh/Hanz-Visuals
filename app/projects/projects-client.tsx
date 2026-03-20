@@ -109,7 +109,7 @@ export default function ProjectsClient() {
           )}
         </div>
         <div className="flex flex-row flex-wrap gap-10 font-anonymouspro">
-          {projectList.map(p=>{
+          {projectList.length > 0 ? (projectList.map(p=>{
             let startDate = "";
             let endDate = "";
 
@@ -125,15 +125,15 @@ export default function ProjectsClient() {
 
             return (
               p.link.includes("projects") ? (
-                <Link href={p.link} className="block w-full md:w-60" key={p.name}>
+                <Link href={p.link} className="block w-full h-full md:h-80 md:w-60" key={p.name}>
                   <div 
-                    className="group flex flex-col items-end justify-end text-right h-full md:h-80 transition-shadow duration-300 hover:shadow-[0_4px_10px_rgba(0,0,0,0.5)] bg-[length:120%] bg-[position:40%_40%]" 
+                    className="group flex flex-col items-end justify-end text-right w-full h-full md:h-80 md:w-60 transition-shadow duration-300 hover:shadow-[0_4px_10px_rgba(0,0,0,0.5)] bg-[length:120%] bg-[position:40%_40%]" 
                     style={{ backgroundImage: p.key ? `url(/projects/cover/${p.key}.jpg)` : "none" }} 
                     key={p.name}
                   >
-                    <div className="bg-[#e5e5e5e1] p-4 opacity-100 md:opacity-0 md:group-hover:opacity-100 md:transition-opacity md:duration-500">
+                    <div className="bg-[#e5e5e5e1] w-full md:w-60 p-4 opacity-100 md:opacity-0 md:group-hover:opacity-100 md:transition-opacity md:duration-500">
                       <p className="text-black leading-none font-phonk text-2xl">{p.name.toUpperCase()}</p>
-                      <p className="text-black text-base">{startDate && <span>{startDate}</span>}{p.endDate && <span> - {endDate}</span>}</p>
+                      <p className="text-black text-base font-semibold">{startDate && <span>{startDate}</span>}{p.endDate && <span> - {endDate}</span>}</p>
                     </div>
                   </div>
                 </Link>
@@ -142,23 +142,25 @@ export default function ProjectsClient() {
                   href={p.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full md:w-60"
+                  className="block w-full h-full md:h-80 md:w-60"
                   key={p.name}
                 >
                   <div 
-                    className="group flex flex-col items-end justify-end text-right h-full md:h-80 bg-[length:120%] bg-[position:40%_40%] transition-shadow duration-300 hover:shadow-[0_4px_10px_rgba(0,0,0,0.5)]" 
+                    className="group flex flex-col items-end justify-end text-right w-full md:w-60 h-full md:h-80 bg-[length:120%] bg-[position:40%_40%] transition-shadow duration-300 hover:shadow-[0_4px_10px_rgba(0,0,0,0.5)]" 
                     style={{ backgroundImage: p.key ? `url(/projects/cover/${p.key}.jpg)` : "none" }} 
                     key={p.name}
                   >
-                    <div className="bg-[#e5e5e5e1] p-4 opacity-100 md:opacity-0 md:group-hover:opacity-100 md:transition-opacity md:duration-500">
+                    <div className="bg-[#e5e5e5e1] w-full md:w-60 p-4 opacity-100 md:opacity-0 md:group-hover:opacity-100 md:transition-opacity md:duration-500">
                       <p className="text-black leading-none font-phonk text-2xl">{p.name.toUpperCase()}</p>
-                      <p className="text-black text-base">{startDate && <span>{startDate}</span>}{p.endDate && <span> - {endDate}</span>}</p>
+                      <p className="text-black text-base font-semibold">{startDate && <span>{startDate}</span>}{p.endDate && <span> - {endDate}</span>}</p>
                     </div>
                   </div>
                 </a>
               )
             )
-          })}
+          })) : (
+            <p className="italic text-center w-full text-base md:text-xl">No results found</p>
+          )}
         </div>
       </div>
       <Footer/>

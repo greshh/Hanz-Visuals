@@ -6,7 +6,13 @@ export default function Carousel({ data }: { data: { image: string }[]}) {
   const [currentImg, setCurrentImg] = useState(0)
   const [carouselSize, setCarouselSize] = useState({ width: 0, height: 0 })
   const [isFirstImg, setIsFirstImg] = useState(true);
-  const carouselRef = useRef(null)
+  const [isLandscape, setIsLandscape] = useState(true);
+  const carouselRef = useRef(null);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(orientation: landscape)");
+    setIsLandscape(mediaQuery.matches);
+  }, []);
 
   const FIRST_DURATION_PER_IMAGE = 2; // In seconds
   const DURATION_PER_IMAGE = 5; // In seconds
@@ -34,13 +40,15 @@ export default function Carousel({ data }: { data: { image: string }[]}) {
       <div className='w-full h-[90vh] lg:h-[90vh] overflow-hidden relative'>
         <button
           onClick={() => currentImg != 0 ? setCurrentImg(prev => prev - 1) : setCurrentImg(data.length-1)}
-          className={`absolute left-0 bg-gradient-to-r from-neutral-950 to-transparent top-0 px-4 py-2 h-[90vh] lg:h-[90vh] w-[20vw] text-white text-left text-xl lg:text-5xl font-bold z-20 hover:text-neutral-400 transition-hover duration-500`}
+          className={`absolute left-0 top-0 px-4 py-2 h-[90vh] lg:h-[90vh] w-[20vw] text-white text-left text-xl lg:text-5xl font-bold z-20 hover:text-neutral-400 transition-hover duration-500`}
+          style={{ background: isLandscape ? "linear-gradient(to right, #0a0a0aff, rgba(10, 10, 10, 0))" : "linear-gradient(to right, #0a0a0a33, rgba(10, 10, 10, 0))" }} 
         >
             {"<"}
         </button>
         <button
-            className={`absolute bg-gradient-to-l from-neutral-950 to-transparent right-0 top-0 px-4 py-2 h-[90vh] lg:h-[90vh] w-[20vw] text-white text-right text-xl lg:text-5xl font-bold z-20 hover:text-neutral-400 transition-hover duration-500`}
+            className={`absolute right-0 top-0 px-4 py-2 h-[90vh] lg:h-[90vh] w-[20vw] text-white text-right text-xl lg:text-5xl font-bold z-20 hover:text-neutral-400 transition-hover duration-500`} 
             onClick={() => currentImg != data.length-1 ? setCurrentImg(prev => prev + 1) : setCurrentImg(0)}
+            style={{ background: isLandscape ? "linear-gradient(to left, #0a0a0aff, rgba(10, 10, 10, 0))" : "linear-gradient(to left, #0a0a0a33, rgba(10, 10, 10, 0))" }}
         >
             {">"}
         </button>
