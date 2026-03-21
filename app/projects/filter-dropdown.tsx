@@ -53,7 +53,7 @@ export default function FilterDropdown(props: Props) {
   }
 
   return (
-    <div className={`absolute left-0 max-w-16 min-w-fit h-fit lg:w-48 bg-white shadow-lg border-2 rounded-r-lg border-l-0 py-4 px-5 trasnform transition-transform duration-300 font-anonymouspro
+    <div className={`absolute left-0 max-w-16 min-w-fit h-fit lg:w-48 bg-white shadow-lg border-2 rounded-r-lg border-l-0 py-4 px-5 trasnform transition-transform duration-300 font-anonymouspro z-40
     ${filterOpen ? "translate-x-0" : "-translate-x-full"}`}>
       <div className="flex flex-col gap-1">
         <div className="flex flex-row gap-3 items-center">
