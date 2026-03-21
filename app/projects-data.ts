@@ -4,7 +4,8 @@ export interface Project {
   startDate?: string;
   endDate?: string;
   tags: string[];
-  link: string;
+  link?: string;
+  file?: string;
 }
 
 export const projects: Project[] = [
@@ -78,5 +79,33 @@ export const projects: Project[] = [
     "endDate": "2026-03-13",
     "tags": ["photos", "volleyball"],
     "link": "https://photos.app.goo.gl/Y9FdguWWQfCR4xsKA"
+  },
+  {
+    "name": "Camp David U16",
+    "key": "camp-david-u16",
+    "startDate": "2026-03-04",
+    "tags": ["graphics", "basketball"],
+    "file": "camp-david-u16.png"
+  },
+  {
+    "name": "Tate Mixtape",
+    "key": "tate-mixtape",
+    "startDate": "2026-03-04",
+    "tags": ["videos", "volleyball"],
+    "file": "tate-mixtape.mp4"
+  },
+  {
+    "name": "EJ Mixtape",
+    "key": "ej-mixtape",
+    "startDate": "2026-03-04",
+    "tags": ["videos", "basketball"],
+    "file": "ej-mixtape.mp4"
+  },
+  {
+    "name": "Selwyn Mixtape",
+    "key": "selwyn-mixtape",
+    "startDate": "2026-03-04",
+    "tags": ["videos", "volleyball"],
+    "file": "selwyn-mixtape.mp4"
   }
 ]

@@ -2,31 +2,31 @@
   {
     "name": "Photos",
     "type": "media",
-    "colour": "#D6B98C"
+    "colour": "#E6D7C3"
   },
   {
     "name": "Videos",
     "type": "media",
-    "colour": "#2B4C6F"
+    "colour": "#C2D0DE"
   },
   {
     "name": "Graphics",
     "type": "media",
-    "colour": "#CFCFCF"
+    "colour": "#D9B3FF"
   },
   {
     "name": "Basketball",
     "type": "sport",
-    "colour": "#F36B21"
+    "colour": "#F7A87A"
   }, 
   {
     "name": "Volleyball",
     "type": "sport",
-    "colour": "#D4AF37"
+    "colour": "#E6D6A0"
   },
   {
     "name": "Other",
     "type": "sport",
-    "colour": "#36a348"
+    "colour": "#A8D5AE"
   }
 ]
