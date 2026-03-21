@@ -5,6 +5,7 @@ import Footer from "../footer";
 import filters from "../filters.json";
 import FilterDropdown from "./filter-dropdown";
 import Link from "next/link";
+import Image from "next/image";
 import { projects } from "../projects-data";
 
 interface Filter {
@@ -74,7 +75,7 @@ export default function ProjectsClient() {
         <h1 className="text-white font-humane text-9xl md:text-[200px] lg:text-[400px] font-semibold tracking-wider">{("Projects").toUpperCase()}</h1>
       </div>
       <div className="h-12 md:h-40 relative">
-        <div className="absolute top-0 left-0 w-full h-10 md:h-20 bg-gradient-to-b from-neutral-400 to-white"/>
+        <div className="absolute top-0 left-0 w-full h-10 md:h-20 bg-gradient-to-b from-neutral-300 to-white"/>
       </div>
       <FilterDropdown selectedFilters={selectedFilters} router={router} filterOpen={filterOpen} setFilterOpen={setFilterOpen}/>
       <div className="px-10 md:px-52 mb-20 min-h-[25rem]" id="filter">
@@ -108,7 +109,7 @@ export default function ProjectsClient() {
             </div>
           )}
         </div>
-        <div className="flex flex-row flex-wrap gap-10 font-anonymouspro">
+        <div className="flex flex-row flex-wrap gap-10 font-anonymouspro justify-center">
           {projectList.length > 0 ? (projectList.map(p=>{
             let startDate = "";
             let endDate = "";
@@ -125,13 +126,22 @@ export default function ProjectsClient() {
 
             return (
               p.link.includes("projects") ? (
-                <Link href={p.link} className="block w-full h-full md:h-80 md:w-60" key={p.name}>
+                <Link href={p.link} className="block w-full aspect-[4/5] md:w-60" key={p.name}>
                   <div 
-                    className="group flex flex-col items-end justify-end text-right w-full h-full md:h-80 md:w-60 transition-shadow duration-300 hover:shadow-[0_4px_10px_rgba(0,0,0,0.5)] bg-[length:120%] bg-[position:40%_40%]" 
-                    style={{ backgroundImage: p.key ? `url(/projects/cover/${p.key}.jpg)` : "none" }} 
+                    className="relative group flex flex-col items-end justify-end text-right w-full aspect-[4/5] md:w-60 transition-shadow duration-300 hover:shadow-[0_4px_10px_rgba(0,0,0,0.5)]"
+                    // style={{ backgroundImage: p.key ? `url(/projects/cover/${p.key}.jpg)` : "none" }} 
                     key={p.name}
                   >
-                    <div className="bg-[#e5e5e5e1] w-full md:w-60 p-4 opacity-100 md:opacity-0 md:group-hover:opacity-100 md:transition-opacity md:duration-500">
+                    <Image 
+                      src={`/projects/cover/${p.key}.jpg`}
+                      alt={p.name}
+                      width={240}
+                      height={320}
+                      quality={100}
+                      sizes="(min-width: 768px) 240px, 100vw"
+                      className="absolute top-0 object-cover z-0"
+                    />
+                    <div className="bg-gradient-to-t from-neutral-300 to-[#e5e5e5e1] w-full md:w-60 p-4 opacity-100 md:opacity-0 md:group-hover:opacity-100 md:transition-opacity md:duration-500 z-10">
                       <p className="text-black leading-none font-phonk text-2xl">{p.name.toUpperCase()}</p>
                       <p className="text-black text-base font-semibold">{startDate && <span>{startDate}</span>}{p.endDate && <span> - {endDate}</span>}</p>
                     </div>
@@ -142,15 +152,24 @@ export default function ProjectsClient() {
                   href={p.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full h-full md:h-80 md:w-60"
+                  className="block w-full aspect-[4/5] md:w-60"
                   key={p.name}
                 >
                   <div 
-                    className="group flex flex-col items-end justify-end text-right w-full md:w-60 h-full md:h-80 bg-[length:120%] bg-[position:40%_40%] transition-shadow duration-300 hover:shadow-[0_4px_10px_rgba(0,0,0,0.5)]" 
-                    style={{ backgroundImage: p.key ? `url(/projects/cover/${p.key}.jpg)` : "none" }} 
+                    className="relative group flex flex-col items-end justify-end text-right w-full aspect-[4/5] md:w-60 transition-shadow duration-300 hover:shadow-[0_4px_10px_rgba(0,0,0,0.5)]"
+                    // style={{ backgroundImage: p.key ? `url(/projects/cover/${p.key}.jpg)` : "none" }} 
                     key={p.name}
                   >
-                    <div className="bg-[#e5e5e5e1] w-full md:w-60 p-4 opacity-100 md:opacity-0 md:group-hover:opacity-100 md:transition-opacity md:duration-500">
+                    <Image 
+                      src={`/projects/cover/${p.key}.jpg`}
+                      alt={p.name}
+                      width={240}
+                      height={320}
+                      quality={100}
+                      sizes="(min-width: 768px) 240px, 100vw"
+                      className="absolute top-0 object-cover z-0"
+                    />
+                    <div className="bg-gradient-to-t from-neutral-300 to-[#e5e5e5e1] w-full md:w-60 p-4 opacity-100 md:opacity-0 md:group-hover:opacity-100 md:transition-opacity md:duration-500 z-10">
                       <p className="text-black leading-none font-phonk text-2xl">{p.name.toUpperCase()}</p>
                       <p className="text-black text-base font-semibold">{startDate && <span>{startDate}</span>}{p.endDate && <span> - {endDate}</span>}</p>
                     </div>

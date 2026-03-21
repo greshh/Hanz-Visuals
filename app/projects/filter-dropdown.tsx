@@ -57,7 +57,7 @@ export default function FilterDropdown(props: Props) {
     ${filterOpen ? "translate-x-0" : "-translate-x-full"}`}>
       <div className="flex flex-col gap-1">
         <div className="flex flex-row gap-3 items-center">
-          <p className="font-bold font-phonk text-xl tracking-wider">{("Filters").toUpperCase()}</p>
+          <p className="font-bold font-phonk text-xl tracking-wider text-black">{("Filters").toUpperCase()}</p>
           <img 
             src="/projects/remove-filter.svg" 
             alt={"close dropdown"} 
@@ -65,7 +65,7 @@ export default function FilterDropdown(props: Props) {
             onClick={()=>{setFilterOpen(false)}}
           />
         </div>
-        <p className="font-phonk my-2 text-base underline tracking-wider">{("Media").toUpperCase()}</p>
+        <p className="font-phonk my-2 text-base underline tracking-wider text-black">{("Media").toUpperCase()}</p>
         {media.map((filter)=>
           <div 
             className="flex flex-row items-center w-full box-border gap-3 cursor-pointer" 
@@ -78,10 +78,10 @@ export default function FilterDropdown(props: Props) {
               "/projects/filter-dropdown/unchecked.svg"} 
               alt="checkbox"
             />
-            <p>{filter.name}</p>
+            <p className="text-black">{filter.name}</p>
           </div>
         )}
-        <p className="font-phonk my-2 text-base underline tracking-wider">{("Sport").toUpperCase()}</p>
+        <p className="font-phonk my-2 text-base underline tracking-wider text-black">{("Sport").toUpperCase()}</p>
         {sport.map((filter)=>
           <div 
             className="flex flex-row items-center w-full box-border gap-3 cursor-pointer" 
@@ -94,7 +94,7 @@ export default function FilterDropdown(props: Props) {
               "/projects/filter-dropdown/unchecked.svg"} 
               alt="checkbox"
             />
-            <p>{filter.name}</p>
+            <p className="text-black">{filter.name}</p>
           </div>
         )}
       </div>
