@@ -107,5 +107,40 @@ export const projects: Project[] = [
     "startDate": "2026-03-04",
     "tags": ["videos", "volleyball"],
     "file": "selwyn-mixtape.mp4"
-  }
+  },
+  {
+    "name": "Roller Blacks Camp",
+    "key": "roller-blacks-camp",
+    "startDate": "2026-03-22",
+    "tags": ["photos", "basketball"],
+    "link": "https://photos.app.goo.gl/32uqUpvrDBCBm93z9"
+  },
+  {
+    "name": "Roller Blacks Hype Edit",
+    "key": "roller-blacks-hype-edit",
+    "startDate": "2026-03-22",
+    "tags": ["videos", "basketball"],
+    "file": "roller-blacks-mixtape.mp4"
+  },
+  {
+    "name": "Micd Up with Tate Sun",
+    "key": "micd-up-tate-sun",
+    "startDate": "2026-02-20",
+    "tags": ["videos", "volleyball"],
+    "file": "micd-up-tate-sun.mp4"
+  },
+  {
+    "name": "Micd Up with John Tunley",
+    "key": "micd-up-john-tunley",
+    "startDate": "2026-02-27",
+    "tags": ["videos", "volleyball"],
+    "file": "micd-up-john-tunley.mp4"
+  },
+  {
+    "name": "Micd Up with Dominik De Paula",
+    "key": "micd-up-dominik-de-paula",
+    "startDate": "2026-02-27",
+    "tags": ["videos", "volleyball"],
+    "file": "micd-up-dominik-de-paula.mp4"
+  },
 ]

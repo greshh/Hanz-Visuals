@@ -120,70 +120,25 @@ export default function ProjectsClient() {
               </div>
             )}
           </div>
-          <div className="flex flex-row flex-wrap gap-10 font-anonymouspro justify-between">
-            {projectList.length > 0 ? (projectList.map(p=>{
-              let startDate = "";
-              let endDate = "";
+          <div className="flex justify-center">
+            <div className="flex flex-row flex-wrap gap-10 font-anonymouspro w-fit">
+              {projectList.length > 0 ? (projectList.map(p=>{
+                let startDate = "";
+                let endDate = "";
 
-              if (p.startDate) {
-                const [startYear, startMonth, startDay] = p.startDate.split("-");
-                startDate = `${startDay}/${startMonth}/${startYear}`;
-              }
+                if (p.startDate) {
+                  const [startYear, startMonth, startDay] = p.startDate.split("-");
+                  startDate = `${startDay}/${startMonth}/${startYear}`;
+                }
 
-              if (p.endDate) {
-                const [endYear, endMonth, endDay] = p.endDate.split("-");
-                endDate = `${endDay}/${endMonth}/${endYear}`;
-              }
+                if (p.endDate) {
+                  const [endYear, endMonth, endDay] = p.endDate.split("-");
+                  endDate = `${endDay}/${endMonth}/${endYear}`;
+                }
 
-              return (
-                p.link?.includes("projects") ? (
-                  <Link href={p.link} className="block w-full md:w-60" key={p.name}>
-                    <div 
-                      className="relative group flex flex-col items-end justify-end text-right h-full md:h-80 object-cover transition-shadow duration-300 hover:shadow-[0_4px_10px_rgba(0,0,0,0.5)]"
-                      key={p.name}
-                    >
-                      <Image 
-                        src={`/projects/cover/${p.key}.jpg`}
-                        alt={p.name}
-                        width={240}
-                        height={320}
-                        quality={100}
-                        sizes="(min-width: 768px) 240px, 100vw"
-                        className="absolute top-0 object-cover z-0 h-full md:h-80 w-full"
-                      />
-                      <div className="bg-gradient-to-t from-neutral-300 to-[#e5e5e5e1] w-full md:w-60 h-40 md:h-fit p-4 opacity-100 md:opacity-0 md:group-hover:opacity-100 md:transition-opacity md:duration-500 z-10 flex flex-col justify-center items-end">
-                        {p.tags.includes("photos") && <div 
-                          className="bg-[#E6D7C3] w-fit flex flex-row gap-2 py-1 px-3 text-center rounded-2xl text-base items-center text-black font-anonymouspro mb-2" 
-                          key="photos"
-                        >
-                          <p className="text-center font-bold">Photos</p>
-                        </div>}
-                        {p.tags.includes("videos") && <div 
-                          className="bg-[#C2D0DE] flex flex-row gap-2 py-1 px-3 text-center text-base rounded-2xl items-center text-black font-anonymouspro mb-2" 
-                          key="videos"
-                        >
-                          <p className="text-center font-bold">Videos</p>
-                        </div>}
-                        {p.tags.includes("graphics") && <div 
-                          className="bg-[#D9B3FF] flex flex-row gap-2 py-1 px-3 text-center rounded-2xl items-center text-base text-black font-anonymouspro mb-2" 
-                          key="graphics"
-                        >
-                          <p className="text-center font-bold">Graphics</p>
-                        </div>}
-                        <p className="text-black leading-none font-phonk text-2xl text-ellipsis">{p.name.toUpperCase()}</p>
-                        <p className="text-black text-base font-semibold">{startDate && <span>{startDate}</span>}{p.endDate && <span> - {endDate}</span>}</p>
-                      </div>
-                    </div>
-                  </Link>
-                ) : (
-                  p.link ? (
-                    <a
-                      href={p.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block w-full md:w-60"
-                      key={p.name}
-                    >
+                return (
+                  p.link?.includes("projects") ? (
+                    <Link href={p.link} className="block w-full md:w-60" key={p.name}>
                       <div 
                         className="relative group flex flex-col items-end justify-end text-right h-full md:h-80 object-cover transition-shadow duration-300 hover:shadow-[0_4px_10px_rgba(0,0,0,0.5)]"
                         key={p.name}
@@ -198,73 +153,120 @@ export default function ProjectsClient() {
                           className="absolute top-0 object-cover z-0 h-full md:h-80 w-full"
                         />
                         <div className="bg-gradient-to-t from-neutral-300 to-[#e5e5e5e1] w-full md:w-60 h-40 md:h-fit p-4 opacity-100 md:opacity-0 md:group-hover:opacity-100 md:transition-opacity md:duration-500 z-10 flex flex-col justify-center items-end">
-                        {p.tags.includes("photos") && <div 
-                          className="bg-[#E6D7C3] w-fit flex flex-row gap-2 py-1 px-3 text-center rounded-2xl text-base items-center text-black font-anonymouspro mb-2" 
-                          key="photos"
-                        >
-                          <p className="text-center font-bold">Photos</p>
-                        </div>}
-                        {p.tags.includes("videos") && <div 
-                          className="bg-[#C2D0DE] flex flex-row gap-2 py-1 px-3 text-center text-base rounded-2xl items-center text-black font-anonymouspro mb-2" 
-                          key="videos"
-                        >
-                          <p className="text-center font-bold">Videos</p>
-                        </div>}
-                        {p.tags.includes("graphics") && <div 
-                          className="bg-[#D9B3FF] flex flex-row gap-2 py-1 px-3 text-center rounded-2xl items-center text-base text-black font-anonymouspro mb-2" 
-                          key="graphics"
-                        >
-                          <p className="text-center font-bold">Graphics</p>
-                        </div>}
+                          {p.tags.includes("photos") && <div 
+                            className="bg-[#E6D7C3] w-fit flex flex-row gap-2 py-1 px-3 text-center rounded-2xl text-base items-center text-black font-anonymouspro mb-2" 
+                            key="photos"
+                          >
+                            <p className="text-center font-bold">Photos</p>
+                          </div>}
+                          {p.tags.includes("videos") && <div 
+                            className="bg-[#C2D0DE] flex flex-row gap-2 py-1 px-3 text-center text-base rounded-2xl items-center text-black font-anonymouspro mb-2" 
+                            key="videos"
+                          >
+                            <p className="text-center font-bold">Videos</p>
+                          </div>}
+                          {p.tags.includes("graphics") && <div 
+                            className="bg-[#D9B3FF] flex flex-row gap-2 py-1 px-3 text-center rounded-2xl items-center text-base text-black font-anonymouspro mb-2" 
+                            key="graphics"
+                          >
+                            <p className="text-center font-bold">Graphics</p>
+                          </div>}
                           <p className="text-black leading-none font-phonk text-2xl text-ellipsis">{p.name.toUpperCase()}</p>
                           <p className="text-black text-base font-semibold">{startDate && <span>{startDate}</span>}{p.endDate && <span> - {endDate}</span>}</p>
                         </div>
                       </div>
-                    </a>
+                    </Link>
                   ) : (
-                    <div 
-                      className="relative group flex flex-col items-end justify-end text-right h-full md:h-80 w-full md:w-60 object-cover transition-shadow duration-300 hover:shadow-[0_4px_10px_rgba(0,0,0,0.5)] cursor-pointer"
-                      key={p.name}
-                      onClick={()=>{openFile(p.file ? p.file : "")}}
-                    >
-                      <Image 
-                        src={`/projects/cover/${p.key}.jpg`}
-                        alt={p.name}
-                        width={240}
-                        height={320}
-                        quality={100}
-                        sizes="(min-width: 768px) 240px, 100vw"
-                        className="absolute top-0 object-cover z-0 h-full md:h-80 w-full"
-                      />
-                      <div className="bg-gradient-to-t from-neutral-300 to-[#e5e5e5e1] w-full md:w-60 h-40 md:h-fit p-4 opacity-100 md:opacity-0 md:group-hover:opacity-100 md:transition-opacity md:duration-500 z-10 flex flex-col justify-center items-end">
-                        {p.tags.includes("photos") && <div 
-                          className="bg-[#E6D7C3] w-fit flex flex-row gap-2 py-1 px-3 text-center rounded-2xl text-base items-center text-black font-anonymouspro mb-2" 
-                          key="photos"
+                    p.link ? (
+                      <a
+                        href={p.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block w-full md:w-60"
+                        key={p.name}
+                      >
+                        <div 
+                          className="relative group flex flex-col items-end justify-end text-right h-full md:h-80 object-cover transition-shadow duration-300 hover:shadow-[0_4px_10px_rgba(0,0,0,0.5)]"
+                          key={p.name}
                         >
-                          <p className="text-center font-bold">Photos</p>
-                        </div>}
-                        {p.tags.includes("videos") && <div 
-                          className="bg-[#C2D0DE] flex flex-row gap-2 py-1 px-3 text-center text-base rounded-2xl items-center text-black font-anonymouspro mb-2" 
-                          key="videos"
-                        >
-                          <p className="text-center font-bold">Videos</p>
-                        </div>}
-                        {p.tags.includes("graphics") && <div 
-                          className="bg-[#D9B3FF] flex flex-row gap-2 py-1 px-3 text-center rounded-2xl items-center text-base text-black font-anonymouspro mb-2" 
-                          key="graphics"
-                        >
-                          <p className="text-center font-bold">Graphics</p>
-                        </div>}
-                        <p className="text-black leading-none font-phonk text-2xl text-ellipsis">{p.name.toUpperCase()}</p>
-                        <p className="text-black text-base font-semibold">{startDate && <span>{startDate}</span>}{p.endDate && <span> - {endDate}</span>}</p>
+                          <Image 
+                            src={`/projects/cover/${p.key}.jpg`}
+                            alt={p.name}
+                            width={240}
+                            height={320}
+                            quality={100}
+                            sizes="(min-width: 768px) 240px, 100vw"
+                            className="absolute top-0 object-cover z-0 h-full md:h-80 w-full"
+                          />
+                          <div className="bg-gradient-to-t from-neutral-300 to-[#e5e5e5e1] w-full md:w-60 h-40 md:h-fit p-4 opacity-100 md:opacity-0 md:group-hover:opacity-100 md:transition-opacity md:duration-500 z-10 flex flex-col justify-center items-end">
+                          {p.tags.includes("photos") && <div 
+                            className="bg-[#E6D7C3] w-fit flex flex-row gap-2 py-1 px-3 text-center rounded-2xl text-base items-center text-black font-anonymouspro mb-2" 
+                            key="photos"
+                          >
+                            <p className="text-center font-bold">Photos</p>
+                          </div>}
+                          {p.tags.includes("videos") && <div 
+                            className="bg-[#C2D0DE] flex flex-row gap-2 py-1 px-3 text-center text-base rounded-2xl items-center text-black font-anonymouspro mb-2" 
+                            key="videos"
+                          >
+                            <p className="text-center font-bold">Videos</p>
+                          </div>}
+                          {p.tags.includes("graphics") && <div 
+                            className="bg-[#D9B3FF] flex flex-row gap-2 py-1 px-3 text-center rounded-2xl items-center text-base text-black font-anonymouspro mb-2" 
+                            key="graphics"
+                          >
+                            <p className="text-center font-bold">Graphics</p>
+                          </div>}
+                            <p className="text-black leading-none font-phonk text-2xl text-ellipsis">{p.name.toUpperCase()}</p>
+                            <p className="text-black text-base font-semibold">{startDate && <span>{startDate}</span>}{p.endDate && <span> - {endDate}</span>}</p>
+                          </div>
+                        </div>
+                      </a>
+                    ) : (
+                      <div 
+                        className="relative group flex flex-col items-end justify-end text-right h-full md:h-80 w-full md:w-60 object-cover transition-shadow duration-300 hover:shadow-[0_4px_10px_rgba(0,0,0,0.5)] cursor-pointer"
+                        key={p.name}
+                        onClick={()=>{openFile(p.file ? p.file : "")}}
+                      >
+                        <Image 
+                          src={`/projects/cover/${p.key}.jpg`}
+                          alt={p.name}
+                          width={240}
+                          height={320}
+                          quality={100}
+                          sizes="(min-width: 768px) 240px, 100vw"
+                          className="absolute top-0 object-cover z-0 h-full md:h-80 w-full"
+                        />
+                        <div className="bg-gradient-to-t from-neutral-300 to-[#e5e5e5e1] w-full md:w-60 h-40 md:h-fit p-4 opacity-100 md:opacity-0 md:group-hover:opacity-100 md:transition-opacity md:duration-500 z-10 flex flex-col justify-center items-end">
+                          {p.tags.includes("photos") && <div 
+                            className="bg-[#E6D7C3] w-fit flex flex-row gap-2 py-1 px-3 text-center rounded-2xl text-base items-center text-black font-anonymouspro mb-2" 
+                            key="photos"
+                          >
+                            <p className="text-center font-bold">Photos</p>
+                          </div>}
+                          {p.tags.includes("videos") && <div 
+                            className="bg-[#C2D0DE] flex flex-row gap-2 py-1 px-3 text-center text-base rounded-2xl items-center text-black font-anonymouspro mb-2" 
+                            key="videos"
+                          >
+                            <p className="text-center font-bold">Videos</p>
+                          </div>}
+                          {p.tags.includes("graphics") && <div 
+                            className="bg-[#D9B3FF] flex flex-row gap-2 py-1 px-3 text-center rounded-2xl items-center text-base text-black font-anonymouspro mb-2" 
+                            key="graphics"
+                          >
+                            <p className="text-center font-bold">Graphics</p>
+                          </div>}
+                          <p className="text-black leading-none font-phonk text-2xl text-ellipsis">{p.name.toUpperCase()}</p>
+                          <p className="text-black text-base font-semibold">{startDate && <span>{startDate}</span>}{p.endDate && <span> - {endDate}</span>}</p>
+                        </div>
                       </div>
-                    </div>
+                    )
                   )
                 )
-              )
-            })) : (
-              <p className="italic text-center w-full text-base md:text-xl">No results found</p>
-            )}
+              })) : (
+                <p className="italic text-center w-full text-base md:text-xl">No results found</p>
+              )}
+            </div>
           </div>
         </div>
         <Footer/>
