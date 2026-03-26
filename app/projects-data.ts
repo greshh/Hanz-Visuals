@@ -90,23 +90,23 @@ export const projects: Project[] = [
   {
     "name": "Tate Mixtape",
     "key": "tate-mixtape",
-    "startDate": "2026-03-04",
+    "startDate": "2026-03-06",
     "tags": ["videos", "volleyball"],
-    "file": "tate-mixtape.mp4"
+    "link": "https://drive.google.com/file/d/1bW6QCvVR-m6OrCqIqnpjNChdQBFucU9X/view?usp=drive_link"
   },
   {
     "name": "EJ Mixtape",
     "key": "ej-mixtape",
-    "startDate": "2026-03-04",
+    "startDate": "2026-01-26",
     "tags": ["videos", "basketball"],
-    "file": "ej-mixtape.mp4"
+    "link": "https://drive.google.com/file/d/1AqKSnogfCzC2nEYg0GEYekasFP9yk04K/view?usp=drive_link"
   },
   {
     "name": "Selwyn Mixtape",
     "key": "selwyn-mixtape",
-    "startDate": "2026-03-04",
+    "startDate": "2026-03-13",
     "tags": ["videos", "volleyball"],
-    "file": "selwyn-mixtape.mp4"
+    "link": "https://drive.google.com/file/d/18eMH_t4GXwZG-gkN6WiRaCOfzPgFwOWX/view?usp=drive_link"
   },
   {
     "name": "Roller Blacks Camp",
@@ -120,27 +120,27 @@ export const projects: Project[] = [
     "key": "roller-blacks-hype-edit",
     "startDate": "2026-03-22",
     "tags": ["videos", "basketball"],
-    "file": "roller-blacks-mixtape.mp4"
+    "link": "https://drive.google.com/file/d/1NOFDfogoYC4FXFRZpWfVXVtMP8t1FyM_/view?usp=drive_link"
   },
   {
     "name": "Micd Up with Tate Sun",
     "key": "micd-up-tate-sun",
     "startDate": "2026-02-20",
     "tags": ["videos", "volleyball"],
-    "file": "micd-up-tate-sun.mp4"
+    "link": "https://drive.google.com/file/d/1IocifLVBnYMhn-vFhnv9EOVodd378YiZ/view?usp=drive_link"
   },
   {
     "name": "Micd Up with John Tunley",
     "key": "micd-up-john-tunley",
     "startDate": "2026-02-27",
     "tags": ["videos", "volleyball"],
-    "file": "micd-up-john-tunley.mp4"
+    "link": "https://drive.google.com/file/d/1fagkNaZzkCiKixVq-1tzoZFdekmk0Wlj/view?usp=drive_link"
   },
   {
     "name": "Micd Up with Dominik De Paula",
     "key": "micd-up-dominik-de-paula",
-    "startDate": "2026-02-27",
+    "startDate": "2026-03-12",
     "tags": ["videos", "volleyball"],
-    "file": "micd-up-dominik-de-paula.mp4"
+    "link": "https://drive.google.com/file/d/1_golhRyeqCUUp6ywCcXCO2zOaw1Cp2_B/view?usp=drive_link"
   },
 ]
