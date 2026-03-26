@@ -126,21 +126,21 @@ export const projects: Project[] = [
     "name": "Micd Up with Tate Sun",
     "key": "micd-up-tate-sun",
     "startDate": "2026-02-20",
-    "tags": ["videos", "volleyball"],
+    "tags": ["videos", "micd up", "volleyball"],
     "link": "https://drive.google.com/file/d/1IocifLVBnYMhn-vFhnv9EOVodd378YiZ/view?usp=drive_link"
   },
   {
     "name": "Micd Up with John Tunley",
     "key": "micd-up-john-tunley",
     "startDate": "2026-02-27",
-    "tags": ["videos", "volleyball"],
+    "tags": ["videos", "micd up", "volleyball"],
     "link": "https://drive.google.com/file/d/1fagkNaZzkCiKixVq-1tzoZFdekmk0Wlj/view?usp=drive_link"
   },
   {
     "name": "Micd Up with Dominik De Paula",
     "key": "micd-up-dominik-de-paula",
     "startDate": "2026-03-12",
-    "tags": ["videos", "volleyball"],
+    "tags": ["videos", "micd up", "volleyball"],
     "link": "https://drive.google.com/file/d/1_golhRyeqCUUp6ywCcXCO2zOaw1Cp2_B/view?usp=drive_link"
   },
 ]

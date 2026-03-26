@@ -11,6 +11,7 @@ import { projects } from "../projects-data";
 
 interface Filter {
   name: string;
+  key: string;
   type: string;
   colour: string;
 }
@@ -89,7 +90,7 @@ export default function ProjectsClient() {
           <div className="absolute top-0 left-0 w-full h-10 md:h-20 bg-gradient-to-b from-neutral-300 to-white"/>
         </div>
         <FilterDropdown selectedFilters={selectedFilters} router={router} filterOpen={filterOpen} setFilterOpen={setFilterOpen}/>
-        <div className="px-10 md:px-52 mb-20 min-h-[25rem]" id="filter">
+        <div className="pl-10 md:pl-52 pr-10 md:pr-32 mb-20 min-h-[25rem]" id="filter">
           <div className="flex flex-row gap-4 mb-10">
             <img 
               src="/projects/filter.svg" 
@@ -99,7 +100,7 @@ export default function ProjectsClient() {
             />
             {selectedFilters.length > 0 ? (selectedFilters.map(f=>(
               <div 
-                className="flex flex-row gap-2 py-1 px-3 text-center rounded-2xl items-center text-black font-anonymouspro" 
+                className="flex w-fit text-nowrap flex-row gap-2 py-1 px-3 text-center rounded-2xl items-center text-black font-anonymouspro" 
                 style={{backgroundColor: f.colour}}
                 key={f.name}
               >
@@ -120,8 +121,8 @@ export default function ProjectsClient() {
               </div>
             )}
           </div>
-          <div className="flex justify-center">
-            <div className="flex flex-row flex-wrap gap-10 font-anonymouspro w-fit">
+          <div className="w-fit">
+              <div className="flex flex-wrap gap-5 lg:gap-9 xl:gap-9 font-anonymouspro">
               {projectList.length > 0 ? (projectList.map(p=>{
                 let startDate = "";
                 let endDate = "";

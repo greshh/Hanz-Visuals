@@ -1,31 +1,43 @@
 [
   {
     "name": "Photos",
+    "key": "photos",
     "type": "media",
     "colour": "#E6D7C3"
   },
   {
     "name": "Videos",
+    "key": "videos",
     "type": "media",
     "colour": "#C2D0DE"
   },
   {
     "name": "Graphics",
+    "key": "graphics",
     "type": "media",
     "colour": "#D9B3FF"
   },
   {
+    "name": "Micd Up",
+    "key": "micd up",
+    "type": "media",
+    "colour": "#FAF9F6"
+  },
+  {
     "name": "Basketball",
+    "key": "basketball",
     "type": "sport",
     "colour": "#F7A87A"
   }, 
   {
     "name": "Volleyball",
+    "key": "volleyball",
     "type": "sport",
     "colour": "#E6D6A0"
   },
   {
     "name": "Other",
+    "key": "other",
     "type": "sport",
     "colour": "#A8D5AE"
   }
