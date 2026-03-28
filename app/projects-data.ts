@@ -123,24 +123,24 @@ export const projects: Project[] = [
     "link": "https://drive.google.com/file/d/1NOFDfogoYC4FXFRZpWfVXVtMP8t1FyM_/view?usp=drive_link"
   },
   {
-    "name": "Micd Up with Tate Sun",
+    "name": "micdup with Tate Sun",
     "key": "micd-up-tate-sun",
     "startDate": "2026-02-20",
-    "tags": ["videos", "micd up", "volleyball"],
+    "tags": ["videos", "micdup", "volleyball"],
     "link": "https://drive.google.com/file/d/1IocifLVBnYMhn-vFhnv9EOVodd378YiZ/view?usp=drive_link"
   },
   {
-    "name": "Micd Up with John Tunley",
+    "name": "micdup with John Tunley",
     "key": "micd-up-john-tunley",
     "startDate": "2026-02-27",
-    "tags": ["videos", "micd up", "volleyball"],
+    "tags": ["videos", "micdup", "volleyball"],
     "link": "https://drive.google.com/file/d/1fagkNaZzkCiKixVq-1tzoZFdekmk0Wlj/view?usp=drive_link"
   },
   {
-    "name": "Micd Up with Dominik De Paula",
+    "name": "micdup with Dominik De Paula",
     "key": "micd-up-dominik-de-paula",
     "startDate": "2026-03-12",
-    "tags": ["videos", "micd up", "volleyball"],
+    "tags": ["videos", "micdup", "volleyball"],
     "link": "https://drive.google.com/file/d/1_golhRyeqCUUp6ywCcXCO2zOaw1Cp2_B/view?usp=drive_link"
   },
 ]

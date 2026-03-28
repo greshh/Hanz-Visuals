@@ -4,6 +4,7 @@ import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.share
 
 interface Filter {
   name: string;
+  key: string;
   type: string;
   colour: string;
 }
@@ -18,7 +19,7 @@ interface Props {
 export default function FilterDropdown(props: Props) {
   const { selectedFilters, router, filterOpen, setFilterOpen } = props;
 
-  const selectedFiltersNames = selectedFilters.map(f => (f.name).toLowerCase());
+  const selectedFiltersNames = selectedFilters.map(f => (f.key).toLowerCase());
 
   const media: Filter[] = [];
   const sport: Filter[] = [];
@@ -31,10 +32,10 @@ export default function FilterDropdown(props: Props) {
     }
   }
 
-  const isSelected = (filterName: string) => selectedFilters.some(f => f.name === filterName);
+  const isSelected = (filterName: string) => selectedFilters.some(f => f.key === filterName);
 
   const toggleChecked = (filter: Filter) => {
-    const filterName = (filter.name).toLowerCase();
+    const filterName = (filter.key).toLowerCase();
     const current = new Set(selectedFiltersNames);
 
     if (current.has(filterName)) {
@@ -70,10 +71,10 @@ export default function FilterDropdown(props: Props) {
           <div 
             className="flex flex-row items-center w-full box-border gap-3 cursor-pointer" 
             onClick={()=>toggleChecked(filter)} 
-            key={filter.name}
+            key={filter.key}
           >
             <img 
-              src={isSelected(filter.name) === true ? 
+              src={isSelected(filter.key) === true ? 
               "/projects/filter-dropdown/checked.svg" : 
               "/projects/filter-dropdown/unchecked.svg"} 
               alt="checkbox"
@@ -86,10 +87,10 @@ export default function FilterDropdown(props: Props) {
           <div 
             className="flex flex-row items-center w-full box-border gap-3 cursor-pointer" 
             onClick={()=>toggleChecked(filter)} 
-            key={filter.name}
+            key={filter.key}
           >
             <img 
-              src={isSelected(filter.name) === true ? 
+              src={isSelected(filter.key) === true ? 
               "/projects/filter-dropdown/checked.svg" : 
               "/projects/filter-dropdown/unchecked.svg"} 
               alt="checkbox"

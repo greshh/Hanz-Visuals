@@ -34,14 +34,14 @@ export default function ProjectsClient() {
 
   // An array of objects of type Filter derived from URL
   const selectedFilters = filters.filter(f =>
-    selectedFilterNames.includes((f.name).toLowerCase())
+    selectedFilterNames.includes((f.key).toLowerCase())
   );
 
   // An array that separates "media" and "sports" tags from "filters" JSON
   const filtersByCategory: FiltersByCategory = {};
   for (const filter of selectedFilters) {
     if (!filtersByCategory[filter.type]) filtersByCategory[filter.type] = [];
-    filtersByCategory[filter.type].push(filter.name.toLowerCase());
+    filtersByCategory[filter.type].push(filter.key.toLowerCase());
   }
 
   // A list of projects filtered based on selectedFilters
@@ -54,7 +54,7 @@ export default function ProjectsClient() {
   .sort((a, b) => (b.startDate ?? "").localeCompare(a.startDate ?? ""))
 
   const toggleChecked = (filter: Filter) => {
-    const filterName = (filter.name).toLowerCase();
+    const filterName = (filter.key).toLowerCase();
     const current = new Set(selectedFilterNames);
 
     if (current.has(filterName)) {
@@ -102,11 +102,11 @@ export default function ProjectsClient() {
               <div 
                 className="flex w-fit text-nowrap flex-row gap-2 py-1 px-3 text-center rounded-2xl items-center text-black font-anonymouspro" 
                 style={{backgroundColor: f.colour}}
-                key={f.name}
+                key={f.key}
               >
                 <img 
                   src="/projects/remove-filter.svg" 
-                  alt={"remove " + f.name} 
+                  alt={"remove " + f.key} 
                   className="w-2/3 h-2/3 cursor-pointer"
                   onClick={()=>{toggleChecked(f)}}
                 />
