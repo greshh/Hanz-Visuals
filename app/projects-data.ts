@@ -123,24 +123,39 @@ export const projects: Project[] = [
     "link": "https://drive.google.com/file/d/1NOFDfogoYC4FXFRZpWfVXVtMP8t1FyM_/view?usp=drive_link"
   },
   {
-    "name": "micdup with Tate Sun",
+    "name": "Micd Up with Tate Sun",
     "key": "micd-up-tate-sun",
     "startDate": "2026-02-20",
     "tags": ["videos", "micdup", "volleyball"],
     "link": "https://drive.google.com/file/d/1IocifLVBnYMhn-vFhnv9EOVodd378YiZ/view?usp=drive_link"
   },
   {
-    "name": "micdup with John Tunley",
+    "name": "Micd Up with John Tunley",
     "key": "micd-up-john-tunley",
     "startDate": "2026-02-27",
     "tags": ["videos", "micdup", "volleyball"],
     "link": "https://drive.google.com/file/d/1fagkNaZzkCiKixVq-1tzoZFdekmk0Wlj/view?usp=drive_link"
   },
   {
-    "name": "micdup with Dominik De Paula",
+    "name": "Micd Up with Dominik De Paula",
     "key": "micd-up-dominik-de-paula",
     "startDate": "2026-03-12",
     "tags": ["videos", "micdup", "volleyball"],
     "link": "https://drive.google.com/file/d/1_golhRyeqCUUp6ywCcXCO2zOaw1Cp2_B/view?usp=drive_link"
   },
+  {
+    "name": "SSNI Satellite 2026",
+    "key": "ssni-satellite-26",
+    "startDate": "2026-03-26",
+    "endDate": "2026-03-27",
+    "tags": ["photos", "volleyball"],
+    "link": "https://photos.app.goo.gl/Z1Ep3xjLMCcXUgSy8"
+  },
+  {
+    "name": "Micd Up with Marius Leituala",
+    "key": "micd-up-marius-leituala",
+    "startDate": "2026-03-26",
+    "tags": ["videos", "micdup", "volleyball"],
+    "link": "https://drive.google.com/file/d/1frTGcR6pgS-arC_gGKgjvOLVsT1mdiEd/view?usp=sharing"
+  }
 ]
