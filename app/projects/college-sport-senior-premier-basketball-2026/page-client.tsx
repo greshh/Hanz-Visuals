@@ -4,7 +4,7 @@ import Footer from "../../footer";
 import FileView from "../file-view";
 import { seniorPrems2026Projects } from "./projects";
 import { useEffect, useState } from "react";
-import Parallax from "./parallax";
+import Parallax from "../parallax";
 import Spotify from "../spotify";
 
 export default function ClientSeniorPrems2026() {
@@ -26,7 +26,7 @@ const [currentFile, setCurrentFile] = useState("");
         link="https://open.spotify.com/embed/track/1AFKbnV49aMFAzZouEaMEP?utm_source=generator&theme=0&autoplay=1"
       />
       <div className="w-full h-fit relative">
-        <Parallax />
+        <Parallax projectKey="college-sport-senior-premier-basketball-2026" />
       </div>
       <div className="relative w-full min-h-[100vh] h-full flex bg-gradient-to-b from-[#0166b4] to-[#01487E] px-10 md:px-52 flex-col gap-10 items-center justify-center py-10 md:pb-20 md:pt-0 z-30">
         <h1 className="font-humane text-6xl md:text-8xl font-semibold text-white text-center tracking-wider">

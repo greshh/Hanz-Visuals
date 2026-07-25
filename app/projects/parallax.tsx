@@ -2,7 +2,13 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 
-export default function Parallax() {
+// TO USE: 
+// ** projectKey must be the same name as the key in projects.ts. 
+// ** The image must be named the same as the projectKey in the public/projects folder. 
+// ** The background image must be named parallax-background.jpg.
+// ** The foreground image must be named the same as the projectKey as a png.
+
+export default function Parallax({ projectKey }: { projectKey: string }) {
   const bgRef = useRef<HTMLDivElement>(null);
   const scrollY = useRef(0);
 
@@ -26,19 +32,19 @@ export default function Parallax() {
   }, []);
 
   return (
-    <div className="relative w-full">
-      <div ref={bgRef} className="absolute inset-0 z-0 w-full h-[20rem] md:h-[32rem]">
+    <div className="relative h-fit w-full">
+      <div ref={bgRef} className="absolute inset-0 z-0 w-full h-[15rem] md:h-[32rem]">
         <Image 
-          src="/projects/college-sport-senior-premier-basketball-2026/parallax-background.jpg" 
+          src={`/projects/${projectKey}/parallax-background.jpg`}
           alt="Background" 
           fill 
-          className="object-cover object-bottom w-full"
+          className="object-cover w-full"
         />
       </div>
-      <div className="h-36 md:h-60 w-full"/>
-      <div className="relative z-10 w-full">
+      <div className="h-36 md:h-60"/>
+      <div className="relative z-10">
         <Image 
-          src="/projects/college-sport-senior-premier-basketball-2026/Rosmini.png" 
+          src={`/projects/${projectKey}/${projectKey}.png`} 
           alt="Foreground" 
           width={5000} 
           height={5000} 

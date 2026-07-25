@@ -6,6 +6,8 @@ import Carousel from "./carousel";
 import emailjs from "@emailjs/browser";
 import ScrollDown from "./scroll-down";
 import BeholdWidget from "@behold/react"
+import Image from "next/image";
+import CursorGradientText from "./cursor-gradient-text";
 
 export default function Home() {
   const [emailStatus, setEmailStatus] = useState<"idle" | "success" | "error">("idle");
@@ -60,14 +62,22 @@ export default function Home() {
       <div id="showcase" className="relative">
         <div className="absolute top-0 left-0 w-full h-24 md:h-32 bg-gradient-to-b from-neutral-400 to-white"/>
       </div>
-      <div className="px-12 md:px-52">
-        <div className="mt-32 md:mt-40 mb-16 md:mb-36">
+      <div className="px-12 md:px-40 mt-32 md:mt-40 mb-16 md:mb-28 flex flex-col md:flex-row gap-5 md:gap-10 items-center h-fit">
+        <div>
           <h2 id="who-we-are" className="font-phonk text-3xl md:text-4xl mb-5 scroll-mt-60 text-black">{("Who we are").toUpperCase()}</h2>
-          <p className="mb-6 text-md md:text-xl text-black md:leading-relaxed">Kia Ora! <span className="font-bold">Hanz Visuals</span> is run by two brothers, Hanz and Dhon, based in Auckland, New Zealand. We grew up with basketball, volleyball, and other sports, so we know firsthand the highs, the lows, and everything in between that comes with sports. We love capturing those moments: the small details that make the game what it is. Being creative at heart, we combine our love for the game with our passion to create, which is why we are so passionate about sports photography.</p>
+          <p className="mb-6 text-md md:text-xl text-black md:leading-relaxed">Kia Ora! <span className="font-bold">Hanz Visuals</span> is run by two brothers, Dhon and Hanz, based in Auckland, New Zealand. We grew up with basketball, volleyball, and other sports, so we know firsthand the highs, the lows, and everything in between that comes with sports. We love capturing those moments: the small details that make the game what it is. Being creative at heart, we combine our love for the game with our passion to create, which is why we are so passionate about sports photography.</p>
           <p className="mb-6 text-md md:text-xl text-black md:leading-relaxed">Whether we're creating personal athlete content, promoting your next sports event, or capturing high-intensity moments, we focus on clean visuals, strong storytelling, and shooting with purpose. For us, it's not just about taking photos; it's about delivering images and media that athletes, teams, and creatives are proud to share.</p>
         </div>
+        <div className="flex flex-row gap-3">
+          <div className="h-full">
+            <Image src="/home/who-we-are/dhon.jpg" alt="Dhon" width={900} height={1600} className="w-full rounded-md"/>
+          </div>
+          <div className="h-full">
+            <Image src="/home/who-we-are/hanz.jpg" alt="Hanz" width={900} height={1600} className="w-full rounded-md"/>
+          </div>
+        </div>
       </div>
-      <div className="bg-black w-full aspect-[2/1] md:aspect-[4/1] my-10 md:my-20 relative">
+      <div className="bg-black w-full aspect-[2/1] md:aspect-[4/1] my-12 md:my-16 relative">
         <TransitionLink href="/projects" className="group text-center text-white flex flex-col items-center justify-center h-full"> 
           <video 
             src="/home/projects-sequence.mp4" 
@@ -84,7 +94,13 @@ export default function Home() {
           </div>
         </TransitionLink>
       </div>
-      <div className="px-5 md:px-52 mt-16 md:mt-36 mb-5 md:mb-0">
+      <div className="w-full flex justify-center my-12 md:my-16">
+        <a className="flex flex-row w-fit flex-wrap justify-center items-center gap-1 md:gap-5 hover:scale-105 transition-all duration-500" href="https://www.instagram.com/campdavidnz/" target="_blank" rel="noopener noreferrer">
+          <CursorGradientText/>
+          <Image src="/home/camp-david.png" alt="Camp David logo" width={1000} height={1000} className="w-fit h-20 md:h-40"/>
+        </a>
+      </div>
+      <div className="px-5 md:px-52 mb-5 md:mb-0">
         <BeholdWidget feedId="rdtdsHThyYufM7k0s3R6"/>
       </div>
       <div className="bg-gradient-to-b from-white to-neutral-950 h-20 md:h-40"/>
