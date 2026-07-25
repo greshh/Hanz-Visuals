@@ -206,4 +206,12 @@ export const projects: Project[] = [
     "tags": ["photos", "basketball"],
     "link": "https://photos.app.goo.gl/sXdLJ8B9Mn2v9LV68"
   },
+  {
+    "name": "U18s Nationals",
+    "key": "18sNationals-471",
+    "startDate": "2026-07-08",
+    "endDate": "2026-07-11",
+    "tags": ["photos", "basketball"],
+    "link": "https://photos.app.goo.gl/8KjXGDimUFm8rVRE7"
+  },
 ]
