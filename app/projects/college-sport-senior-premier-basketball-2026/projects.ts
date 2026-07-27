@@ -63,5 +63,12 @@ export const seniorPrems2026Projects: Project[] = [
     "away": "Rosmini",
     "date": "2026-07-24",
     "link": "https://photos.app.goo.gl/zF2QCeMMWBaXLbX29"
+  },
+  {
+    "round": 11,
+    "home": "Westlake",
+    "away": "Auckland Grammar",
+    "date": "2026-07-27  ",
+    "link": "https://photos.app.goo.gl/Q6whBw269aCyTN8GA"
   }
 ]
