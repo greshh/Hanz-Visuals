@@ -70,5 +70,19 @@ export const seniorPrems2026Projects: Project[] = [
     "away": "Auckland Grammar",
     "date": "2026-07-27  ",
     "link": "https://photos.app.goo.gl/Q6whBw269aCyTN8GA"
+  },
+  {
+    "round": 12,
+    "home": "Rosmini",
+    "away": "St Peters",
+    "date": "2026-07-31  ",
+    "link": "https://photos.app.goo.gl/2dxT9RKCbyNGaLYV8"
+  },
+  {
+    "round": 12,
+    "home": "Westlake",
+    "away": "Sacred Heart",
+    "date": "2026-07-31  ",
+    "link": "https://photos.app.goo.gl/NH23ayeAduSbhxxC9"
   }
 ]
