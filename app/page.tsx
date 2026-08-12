@@ -89,7 +89,7 @@ export default function Home() {
           />
           <div className="absolute z-10 w-full h-full backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500"/>
           <div className="absolute z-20 w-full h-full flex flex-col items-center justify-center">
-              <h2 className="font-humane text-[30vw] md:text-[20vw] tracking-wider font-semibold leading-none" style={{ textShadow: "0px 5px 10px #000000" }}>PROJECTS</h2>
+              <h2 className="font-humane text-[30vw] md:text-[20vw] tracking-wider font-semibold leading-none" style={{ textShadow: "0px 5px 10px #000000" }}>PORTFOLIO</h2>
               <p className="italic text-2xl leading-none -mt-3 md:-mt-8 font-anonymouspro" style={{ textShadow: "0px 2px 8px #000000" }}>click here</p>
           </div>
         </TransitionLink>
