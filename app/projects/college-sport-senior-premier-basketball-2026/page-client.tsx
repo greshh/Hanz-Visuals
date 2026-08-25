@@ -28,7 +28,7 @@ const [currentFile, setCurrentFile] = useState("");
       <div className="w-full h-fit relative">
         <Parallax projectKey="college-sport-senior-premier-basketball-2026" />
       </div>
-      <div className="relative w-full min-h-[100vh] h-full flex bg-gradient-to-b from-[#0166b4] to-[#01487E] px-10 md:px-52 flex-col gap-10 items-center justify-center py-10 md:pb-20 md:pt-0 z-30">
+      <div className="relative w-full min-h-[100vh] h-full flex bg-gradient-to-b from-[#2e79ac] to-[#01487E] px-10 md:px-52 flex-col gap-10 items-center justify-center py-10 md:pb-20 md:pt-0 z-30">
         <h1 className="font-humane text-6xl md:text-8xl font-semibold text-white text-center tracking-wider">
           {("Senior Premier Basketball 2026").toUpperCase()}
         </h1>
