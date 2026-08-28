@@ -105,5 +105,12 @@ export const seniorPrems2026Projects: Project[] = [
     "away": "St Kentigern",
     "date": "2026-08-21  ",
     "link": "https://photos.app.goo.gl/qZxpBWypQDj2vpGz8"
+  },
+  {
+    "round": "Finasl",
+    "home": "Westlake",
+    "away": "AGS",
+    "date": "2026-08-27  ",
+    "link": "https://photos.app.goo.gl/3t6ij6u4e2DezE4o7"
   }
 ]
